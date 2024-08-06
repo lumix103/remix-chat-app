@@ -1,3 +1,4 @@
+import { LinksFunction } from "@netlify/remix-runtime";
 import {
   Links,
   Meta,
@@ -5,6 +6,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+
+import stylesheet from "~/tailwind.css?url";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesheet },
+];
 
 export default function App() {
   return (
@@ -15,7 +22,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-background text-text">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
