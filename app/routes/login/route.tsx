@@ -4,7 +4,7 @@ import {
   redirect,
 } from "@netlify/remix-runtime";
 import { Form, Link, json, useActionData } from "@remix-run/react";
-import { validateUser } from "./login.server";
+import { validateUser } from "~/utils/bcrypt.server";
 import { commitSession, getSession } from "~/utils/session.server";
 
 export async function loader({ request }: LoaderFunctionArgs) {

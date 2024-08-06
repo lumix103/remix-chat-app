@@ -1,6 +1,6 @@
 import { ActionFunctionArgs, LoaderFunctionArgs } from "@netlify/remix-runtime";
 import { Form, Link, json, redirect, useActionData } from "@remix-run/react";
-import { createUser } from "./signup.server";
+import { createUser } from "~/utils/bcrypt.server";
 import { getSession } from "~/utils/session.server";
 
 export async function loader({ request }: LoaderFunctionArgs) {
